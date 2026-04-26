@@ -1,0 +1,27 @@
+{
+  "name": "science-blog-zho",
+  "version": "1.0.0",
+  "description": "Science Blog in Chinese by Dr. Juan Moisés de la Serna",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanmoisesd/science-blog-zho.git"
+  },
+  "keywords": [],
+  "author": "Juan Moisés de la Serna",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^6.1.9",
+    "tailwindcss": "^3.4.19"
+  }
+}

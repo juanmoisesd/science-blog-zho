@@ -1,0 +1,72 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="胡安·莫伊塞斯·德·拉·塞尔纳博士的科学博客 - 心理学与神经科学" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-gray-50 text-gray-900 font-sans">
+		<header class="bg-white border-b sticky top-0 z-50">
+			<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between h-16 items-center">
+					<div class="flex-shrink-0 flex items-center">
+						<a href="/" class="text-2xl font-bold text-blue-600">科学博客</a>
+					</div>
+					<div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+						<a href="/" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+							首页
+						</a>
+						<a href="/psychology" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+							心理学
+						</a>
+						<a href="/neuroscience" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+							神经科学
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer class="bg-white border-t mt-20 py-10">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div>
+						<h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">关于作者</h3>
+						<p class="mt-4 text-base text-gray-500">
+							胡安·莫伊塞斯·德·拉·塞尔纳 (Juan Moisés de la Serna)<br/>
+							心理学博士，神经科学与行为生物学硕士<br/>
+							大学教授，科学传播者
+						</p>
+					</div>
+					<div>
+						<h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">链接</h3>
+						<ul class="mt-4 space-y-4">
+							<li><a href="/psychology" class="text-base text-gray-500 hover:text-gray-900">心理学文章</a></li>
+							<li><a href="/neuroscience" class="text-base text-gray-500 hover:text-gray-900">神经科学文章</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="mt-8 border-t border-gray-200 pt-8">
+					<p class="text-base text-gray-400 xl:text-center">
+						&copy; 2026 科学博客. 版权所有.
+					</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
