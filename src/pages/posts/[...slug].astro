@@ -14,9 +14,12 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+// Generate a description from the title or hardcoded summary
+const description = `了解关于 ${post.data.title} 的更多信息。作者：胡安·莫伊塞斯·德·拉·塞尔纳博士，心理学与神经科学专家。`;
 ---
 
-<Layout title={post.data.title}>
+<Layout title={post.data.title} description={description}>
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <header class="mb-12">
       <div class="text-blue-600 font-semibold mb-2 uppercase tracking-wider">{post.data.category}</div>
