@@ -6,7 +6,8 @@ interface Props {
 
 const { title, description = "胡安·莫伊塞斯·德·拉·塞尔纳博士的科学博客 - 心理学与神经科学" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const base = import.meta.env.BASE_URL;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : rawBase + '/';
 ---
 
 <!doctype html>
