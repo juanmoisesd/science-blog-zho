@@ -3,23 +3,24 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 
 const posts = await getCollection('neuroscience');
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="神经科学文章列表">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <h1 class="text-3xl font-extrabold text-gray-900 mb-8">神经科学文章</h1>
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {posts.map(post => (
-        <article class="bg-white p-6 rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-          <h2 class="text-xl font-bold mb-2">
-            <a href={`/posts/neuroscience/${post.id}`} class="text-blue-600 hover:underline">
-              {post.data.title}
-            </a>
-          </h2>
-          <p class="text-gray-500 text-sm mb-4">{post.data.pubDate.toLocaleDateString('zh-CN')}</p>
-          <p class="text-gray-600 line-clamp-3">{post.data.description}</p>
-        </article>
-      ))}
-    </div>
-  </div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<h1 class="text-3xl font-extrabold text-gray-900 mb-8">神经科学文章</h1>
+<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+{posts.map(post => (
+<article class="bg-white p-6 rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+<h2 class="text-xl font-bold mb-2">
+<a href={`${base}posts/neuroscience/${post.id}`} class="text-blue-600 hover:underline">
+{post.data.title}
+</a>
+</h2>
+<p class="text-gray-500 text-sm mb-4">{post.data.pubDate.toLocaleDateString('zh-CN')}</p>
+<p class="text-gray-600 line-clamp-3">{post.data.description}</p>
+</article>
+))}
+</div>
+</div>
 </Layout>
