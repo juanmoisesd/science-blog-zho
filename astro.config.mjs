@@ -4,5 +4,6 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   integrations: [tailwind(), sitemap()],
-  site: 'https://juanmoises-serna-blog.pages.dev',
+  site: 'https://juanmoisesd.github.io',
+  base: '/science-blog-zho',
 });
