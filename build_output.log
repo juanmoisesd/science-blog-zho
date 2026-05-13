@@ -1,0 +1,15 @@
+
+> science-blog-zho@1.0.0 build
+> astro build
+
+[astro] Unable to load your Astro config
+
+Cannot find module '@astrojs/sitemap' imported from '/app/astro.config.mjs'
+  Location:
+    /app/node_modules/vite/dist/node/chunks/config.js:33984:34
+  Stack trace:
+    at fetchModule (file:///app/node_modules/vite/dist/node/chunks/config.js:33984:34)
+    at fetchModule (file:///app/node_modules/vite/dist/node/chunks/config.js:34794:17)
+    at EventEmitter.listenerForInvokeHandler (file:///app/node_modules/vite/dist/node/chunks/config.js:25892:19)
+    at Object.send (file:///app/node_modules/vite/dist/node/chunks/config.js:15052:39)
+    at Object.invoke (file:///app/node_modules/vite/dist/node/module-runner.js:584:31)

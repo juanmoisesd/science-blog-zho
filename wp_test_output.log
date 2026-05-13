@@ -1,0 +1,4 @@
+Error: Project(s) "chromium" not found. Available projects: ""
+    at filterProjects (/home/jules/.npm/_npx/e41f203b7505f1fb/node_modules/playwright/lib/runner/projectUtils.js:80:11)
+    at runTests (/home/jules/.npm/_npx/e41f203b7505f1fb/node_modules/playwright/lib/testActions.js:62:42)
+    at async i.<anonymous> (/home/jules/.npm/_npx/e41f203b7505f1fb/node_modules/playwright/lib/program.js:56:7)
